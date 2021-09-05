@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "mikrotik-telegram-bot"
+version = "0.1.0"
+description = "Send message to Telegram with RouterOS"
+authors = ["William Abreu <william@t10.digital>"]
+license = "MIT License"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+python-dotenv = "^0.19.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
