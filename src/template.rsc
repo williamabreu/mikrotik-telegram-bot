@@ -11,7 +11,6 @@
 :local botToken;
 :local chatId;
 :local telegramUrl;
-:local hostname;
 :local ip;
 :local mac;
 :local banner;
@@ -24,15 +23,9 @@ inject(':set chatId ', os.environ.get('TELEGRAM_CHAT_ID'), ';')
 # <<<
 
 :set telegramUrl "https://api.telegram.org/$botToken/sendMessage"
-:set hostname $"lease-hostname";
+:set banner $"lease-hostname";
 :set ip $leaseActIP;
 :set mac $leaseActMAC;
-
-:if ($hostname = "") do={
-    :set banner "<unknown hostname>";
-} else={ 
-    :set banner $hostname;
-}
 
 # >>> python
 inject(':set message "', load_message_html(), '";')
